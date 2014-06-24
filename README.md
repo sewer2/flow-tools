@@ -10,16 +10,35 @@ Requirements
 Attributes
 ----------
 
-#### flow-tools::default
+#### flow-tools::capture
+
+
+```ruby
 node['flow-tools']['capture'] => {
-"myrouter" => "-w /var/flow/myrouter 0/10.1.1.10/3000",
-"mysecondrouter" => "-w /var/flow/mysecondrouter -n 275 0/10.3.2.6/3002",
-...,
-"name" => "options"
+  "myrouter" => {
+    "param" => {
+      "key" => "value",
+      "key" => "value"
+      ...
+    },
+    "workdir" => {
+      "name" => "/tmp",
+      "user" => "root",
+      "group" => "root",
+      "mode" => 0755
+    },
+    "lrp" => "0/0/3000"
+  }
 }
+```
+workdir - Work directory for flow-capture (default /tmp)  
+..user - owner of work directory (default root)  
+..group - group of work directory (default root)  
+..mode - mode access of work directory (default 0755)
 
-read more about the options of flow-capture you can read on http://www.splintered.net/sw/flow-tools/docs/flow-capture.html
+lrp - parameter localip/remoteip/port
 
+read more about the params of flow-capture you can read on http://www.splintered.net/sw/flow-tools/docs/flow-capture.html
 
 Usage
 -----
