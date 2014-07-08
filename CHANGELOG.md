@@ -5,7 +5,7 @@ This file is used to list changes made in each version of the cookbook-flow-tool
 
 0.1.0
 -----
-- [sewer] - Initial release of cookbook-flow-tools
+- [sewer] - Initial release of flow-tools
 
 - - -
 Check the [Markdown Syntax Guide](http://daringfireball.net/projects/markdown/syntax) for help with Markdown.
